@@ -47,13 +47,20 @@
     </header>
     
     <!--Основная часть-->
-    <main>
+    <main class="main">
     <!-- Герой -->
     <section class="hero">
         <div class="container">
             <h1 class="hero-title">Эффективные решения <br>
             для вашего бизнеса</h1>
-            <button type="button" class="button-hero">Заказать услугу</button>
+            <button type="button" class="button-hero" data-modal-open>Заказать услугу</button>
+        </div>
+    
+    <!--Модальное окно-->    
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button data-modal-close>Закрыть</button>
+            </div>
         </div>
     </section>
 
@@ -345,5 +352,9 @@
             </div>
         </div>
     </footer>
+
+    <!--Модальное окно-->
+    <script src="./js/modal.js"></script>
+
 </body>
 </html>
