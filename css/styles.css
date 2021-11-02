@@ -121,6 +121,7 @@ img {
 .kontakt-footer .link:hover,
 .kontakt-footer .link:focus {
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Site nav */
@@ -165,6 +166,7 @@ img {
 .kontakt-header .icon:focus {
   fill: var(--accent-color);
   cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Main */
@@ -226,6 +228,7 @@ img {
   background: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Modal window*/
@@ -236,6 +239,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 500ms linear, visibility 500ms linear;
 }
 
 .backdrop.is-hidden {
@@ -251,8 +255,23 @@ img {
 
   min-height: 581px;
   min-width: 528px;
+  border-radius: 4px;
 
   background-color: var(--primary-white-color);
+}
+
+.modal .box {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Title sections*/
@@ -313,6 +332,24 @@ img {
   margin-bottom: 50px;
 }
 
+.product .backdrop {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  left: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.product .name {
+  position: absolute;
+  font-weight: bold;
+  line-height: 1.14px;
+  text-transform: uppercase;
+
+  color: var(--primary-white-color);
+}
+
 /* Team */
 .team-studio {
   background: #f5f4fa;
@@ -357,6 +394,8 @@ img {
 .team-employees .icon:focus {
   fill: var(--primary-white-color);
   background-color: var(--accent-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Regular customers */
@@ -372,12 +411,14 @@ img {
 .customer .box:hover,
 .customer .box:focus {
   border: 1px solid var(--accent-color);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer .icon:hover,
 .customer .icon:focus {
   fill: var(--accent-color);
   cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Filter Portfolio */
@@ -414,6 +455,8 @@ img {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Portfolio */
@@ -435,6 +478,7 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-example:nth-child(-n + 3) {
@@ -462,6 +506,12 @@ img {
 .example-description {
   font-size: 16px;
   line-height: 1.87;
+}
+
+.portfolio-example .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* Footer */
@@ -541,4 +591,5 @@ img {
 .team-employees .box:hover {
   background-color: var(--accent-color);
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
