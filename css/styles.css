@@ -66,8 +66,6 @@ img {
 /* Header */
 
 .header {
-  position: fixed;
-  z-index: 5;
   width: 100%;
   min-height: 80px;
   top: 0;
@@ -182,11 +180,6 @@ img {
 .kontakt-header .link:focus .header-icon {
   fill: var(--accent-color);
   cursor: pointer;
-}
-
-/* Main */
-.main {
-  padding-top: 80px;
 }
 
 /* Hero */
